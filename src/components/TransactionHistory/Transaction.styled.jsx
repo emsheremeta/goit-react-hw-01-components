@@ -41,3 +41,4 @@ export const Tr = styled.tr`
 &:nth-of-type(2n) {
   background-color: grey;
 `;
+
