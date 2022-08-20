@@ -7,7 +7,6 @@ flex-direction: column;
 align-items: center;
 width: 350px;
 overflow: hidden;
-background-color: #ffffff;
 border-radius: 5px;
 box-shadow: 0 5px 10px #808080;
 `;
@@ -62,15 +61,14 @@ export const Stats = styled.ul`
   padding: 0;
   width: 100%;
   list-style: none;
-  background-color: #f1f1f1;
-  border-top: 1px solid '#f1f1f1';
+  border-top: 1px solid grey;
 `;
 
 export const StatsItem = styled.li`
   flex-basis: calc(100% / 3);
   padding: 10px;
   &:not(:last-child) {
-    border-right: 1px solid '#f1f1f1';
+    border-right: 1px solid grey;
   }
 `;
 

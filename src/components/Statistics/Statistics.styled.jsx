@@ -38,7 +38,7 @@ export const StatsListItem = styled.li`
 export const Label = styled.span`
   display: block;
   margin-bottom: 10px;
-  text-shadow: 0 5px 10px #808080;
+  text-shadow: 0 5px 10px black;
   font-size: 20px;
   text-align: center;
 `;
@@ -46,7 +46,7 @@ export const Label = styled.span`
 export const Percentage = styled.span`
   display: block;
   margin-bottom: 0;
-  text-shadow: 0 5px 10px #808080;
+  text-shadow: 0 5px 10px black;
   font-size: 25px;
   text-align: center;
 `;
