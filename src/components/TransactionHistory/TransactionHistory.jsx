@@ -1,5 +1,4 @@
 
-import PropTypes from 'prop-types';
 import TransactionItem from './TransactionItem';
 import {Table,TableHead,Th,Tr} from './Transaction.styled'
 
