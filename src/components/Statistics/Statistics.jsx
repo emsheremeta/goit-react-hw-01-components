@@ -15,7 +15,7 @@ export default function Statistics({ title, stats }) {
 
       <StatsList>
         {stats.map(element => (
-          <StatsListItem id={element.key} class="item">
+          <StatsListItem id={element.key} className="item">
             <Label>{element.label} </Label>
             <Percentage>{element.percentage}%</Percentage>
           </StatsListItem>
@@ -26,7 +26,7 @@ export default function Statistics({ title, stats }) {
 }
 
 Statistics.propTypes = {
-  id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  percentage: PropTypes.number.isRequired,
+  id: PropTypes.string,
+  label: PropTypes.string,
+  percentage: PropTypes.number,
 };

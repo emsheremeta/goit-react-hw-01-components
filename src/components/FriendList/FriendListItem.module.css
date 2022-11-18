@@ -16,7 +16,7 @@
 }
 
 .true {
-  /* composes: status; */
+  composes: status;
   background-color: green;
 }
 

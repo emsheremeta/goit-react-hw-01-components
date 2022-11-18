@@ -4,7 +4,7 @@ import styles from './FriendListItem.module.css';
 export default function FriendListItem({ avatar, name, isOnline }) {
   return (
     <li className={styles.item}>
-      <span className={styles.isOnline}>{isOnline}</span>
+      <span className={styles[isOnline]}>{isOnline}</span>
       <img
         className={styles.avatar}
         src={avatar}
