@@ -15,7 +15,7 @@ export default function Statistics({ title, stats }) {
 
       <StatsList>
         {stats.map(element => (
-          <StatsListItem id={element.key} className="item">
+          <StatsListItem key={element.id} id={element.key} className="item">
             <Label>{element.label} </Label>
             <Percentage>{element.percentage}%</Percentage>
           </StatsListItem>
