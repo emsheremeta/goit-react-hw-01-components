@@ -11,13 +11,13 @@ import {
 export default function Statistics({ title, stats }) {
   return (
     <StatisticsSection>
-      <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
 
       <StatsList>
-        {stats.map(element => (
-          <StatsListItem key={element.id} id={element.key} className="item">
-            <Label>{element.label} </Label>
-            <Percentage>{element.percentage}%</Percentage>
+        {stats.map(({ id, label, percentage }) => (
+          <StatsListItem key={id} className="item">
+            <Label>{label} </Label>
+            <Percentage>{percentage}%</Percentage>
           </StatsListItem>
         ))}
       </StatsList>
@@ -26,7 +26,6 @@ export default function Statistics({ title, stats }) {
 }
 
 Statistics.propTypes = {
-  id: PropTypes.string,
-  label: PropTypes.string,
-  percentage: PropTypes.number,
+  title: PropTypes.string,
+  stats: PropTypes.array.isRequired,
 };

@@ -12,7 +12,13 @@ import {
   Quantity,
 } from './Profile.styled';
 
-export default function Profile({ username, tag, location, avatar, stats }) {
+export default function Profile({
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+}) {
   return (
     <Container>
       <Description>
@@ -25,15 +31,15 @@ export default function Profile({ username, tag, location, avatar, stats }) {
       <Stats>
         <StatsItem>
           <Label>Followers</Label>
-          <Quantity> {stats.followers}</Quantity>
+          <Quantity> {followers}</Quantity>
         </StatsItem>
         <StatsItem>
           <Label>Views</Label>
-          <Quantity> {stats.views}</Quantity>
+          <Quantity> {views}</Quantity>
         </StatsItem>
         <StatsItem>
           <Label>Likes</Label>
-          <Quantity> {stats.likes}</Quantity>
+          <Quantity> {likes}</Quantity>
         </StatsItem>
       </Stats>
     </Container>
@@ -45,7 +51,9 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  followers: PropTypes.number,
-  views: PropTypes.number,
-  likes: PropTypes.number,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
 };
